@@ -51,7 +51,7 @@
 ### Cправа:
 О чате с картинками и ссылка-переход на страницу с играми и об этом чате .
 
-#Список вдохновения:
-https://www.jivo.ru/?partner_id=18869 — регистрационная и входная форма.\n
-https://quickley.com/ru?partner_id=83 — меню.\n
+# Список вдохновения:
+https://www.jivo.ru/?partner_id=18869 — регистрационная и входная форма. \n
+https://quickley.com/ru?partner_id=83 — меню. \n
 https://telegram.org/ — типо чат.
