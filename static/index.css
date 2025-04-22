@@ -1,80 +1,20 @@
-.header_div {
-    background-color: #939ca3;  
-    width: 90%;
-    border-radius: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    
-
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-
-
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
-
-h1 {
-    margin-left: 3%;
-    color: #3a4146;
-}
-
-.Ico_background {
-    margin-top: 0.5%;
-    margin-left: 10%;
-    margin-bottom: 0.5%;
-    background-color: #e1e4e8;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-}
-
-.Ico {
-    margin-top: 6px;
-    margin-left: 7px;
-    width: 100px;
-    height: 100px;
-}
-
-.menu_about {
-    margin-left: 10%;
-}
-
-.menu_enter {
-    margin-left: 5%;
-}
-
-.menu_reg {
-    margin-left: 5%;
-}
-
-
-body {
-    background-color: #646f77;
-
+.header {
+    background-color: white;
+    width: 110%;
+    height: 160px;
+    margin-left: -5%;
+    margin-top: -10px;
+    border: 1px solid rgb(196, 196, 196);
 }
 
 .body {
-    margin-top: 5%;
-    display: flex;
-    justify-content: start;
+    background-color: rgb(235, 235, 235);
 }
 
-.body_left_reg {
-    margin-left: 15%;
-    background-color: #939ca3;
-    width: 25%;
-    height: 500px;
-    border-radius: 15px
-}
-
-.body_right_about {
-    margin-left: 20%;
-    background-color: #939ca3;
-    width: 25%;
-    height: 150px;
-    border-radius: 15px
+.logo {
+    width: 280px;
+    height: 89.5px;
+    margin-top: 35px;
+    margin-left: 10%;
+     border-radius: 15px;
 }
