@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sing_up.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,23 +24,30 @@
                 <button class="yandex_sing_up"><img src="static/yandex.png" class="yandex_sing_up_img"><label class="yandex_sing_up_text">Sign up with Yandex</label></button>
             </div>
             <label class="ILI_text">- или -</label>
-            <div class="sing_ups" >
-                <label class="sing_ups_label">Ваше имя</label>
-                <input type="text" name="name" class="sing_ups_input">
-            </div>
-            <div class="sing_ups" >
-                <label class="sing_ups_label">Пароль</label>
-                <input type="text" name="name" class="sing_ups_input">
-            </div>
-
-            <button class="sing_ups_button">Войти</button>
+            <form action="{{url_for('sing_up')}}" method="POST"></form>
+                <div class="sing_ups" >
+                    <label class="sing_ups_label">Ваше имя</label>
+                    <input type="text" name="username" class="sing_ups_input">
+                </div>
+                <div class="sing_ups" >
+                    <label class="sing_ups_label">Ваша почта</label>
+                    <input type="text" name="email" class="sing_ups_input">
+                </div>
+                <div class="sing_ups" >
+                    <label class="sing_ups_label">Пароль</label>
+                    <input type="password" name="password" class="sing_ups_input">
+                </div>
+                <div class="sing_ups" >
+                    <label class="sing_ups_label">Повторный Пароль</label>
+                    <input type="password" name="password2" class="sing_ups_input">
+                </div>
+                <button class="sing_ups_button">Зарегистрироваться</button>
+            </form>
             <div class="account_has">
-                <label class="account_has_text">Ещё нет Аккаунта?</label><label class="account_has_text_src">  Зарегистрироваться</label>
+                <label class="account_has_text">Уже есть Аккаунт? </label><label class="account_has_text_src">  Войти</label>
             </div>
         </div>
     </div>
     
 </body>
 </html>
-
-
