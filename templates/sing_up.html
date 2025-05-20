@@ -24,25 +24,25 @@
                 <button class="yandex_sing_up"><img src="static/yandex.png" class="yandex_sing_up_img"><label class="yandex_sing_up_text">Sign up with Yandex</label></button>
             </div>
             <label class="ILI_text">- или -</label>
-            <form action="{{url_for('sing_up')}}" method="POST"></form>
+            <form action="{{url_for('sing_up')}}" method="POST">
                 <div class="sing_ups" >
-                    <label class="sing_ups_label">Ваше имя</label>
-                    <input type="text" name="username" class="sing_ups_input">
+                    <label class="sing_ups_label" for="username">Ваше имя</label>
+                    <input type="text" name="username" class="sing_ups_input" required>
                 </div>
                 <div class="sing_ups" >
-                    <label class="sing_ups_label">Ваша почта</label>
-                    <input type="text" name="email" class="sing_ups_input">
+                    <label class="sing_ups_label" for="email">Ваша почта</label>
+                    <input type="text" name="email" class="sing_ups_input" required>
                 </div>
                 <div class="sing_ups" >
-                    <label class="sing_ups_label">Пароль</label>
-                    <input type="password" name="password" class="sing_ups_input">
+                    <label class="sing_ups_label" for="password">Пароль</label>
+                    <input type="password" name="password" class="sing_ups_input" required>
                 </div>
                 <div class="sing_ups" >
-                    <label class="sing_ups_label">Повторный Пароль</label>
-                    <input type="password" name="password2" class="sing_ups_input">
+                    <label class="sing_ups_label" for="password2">Повторный Пароль</label>
+                    <input type="password" name="password2" class="sing_ups_input" required>
                 </div>
-                <button class="sing_ups_button">Зарегистрироваться</button>
-            </form>
+                <button class="sing_ups_button" >Зарегистрироваться</button>
+            </form>    
             <div class="account_has">
                 <label class="account_has_text">Уже есть Аккаунт? </label><label class="account_has_text_src">  Войти</label>
             </div>
