@@ -18,8 +18,36 @@ def log_in_user(username, password):
 
     cursor = conn.cursor()
 
-    print(cursor.fetchone(1))
+    n = cursor.execute("SELECT login FROM User WHERE login = ", username)
+    print(n)
 
     conn.commit()
 
     conn.close()
+
+def add_message(name, msg):
+    conn = sqlite3.connect('gallery.db')
+
+    cursor = conn.cursor()
+
+    sql = "INSERT INTO msg (name, text) VALUES (?, ?)"
+
+    cursor.execute(sql, (name, msg))
+
+    conn.commit()
+
+    conn.close()
+
+def get_msg():
+    conn = sqlite3.connect('gallery.db')
+
+    cursor = conn.cursor()
+
+    sql = "SELECT * FROM msg"
+
+    cursor.execute(sql)
+    msgs = cursor.fetchall()
+
+    conn.close()
+
+    return msgs

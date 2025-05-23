@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from database import add_user, log_in_user
+from database import add_user, log_in_user, add_message, get_msg
 from flask import request
 
 
@@ -41,9 +41,15 @@ def sing_up():
             
     return render_template("sing_up.html")
 
-@app.route("/chat")
+@app.route("/chat", methods=['GET', 'POST'])
 def chat():
-    return render_template("chat.html")
+
+    if request.method == "POST":
+        message_text = request.form["message"]
+        add_message("Anonimus", message_text)
+
+    msgs = get_msg()
+    return render_template("chat.html", msgs=msgs)
     
 #запуск
 app.run(debug=True)

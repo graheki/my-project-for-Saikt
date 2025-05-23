@@ -23,11 +23,19 @@
     width: 767px;
     height: 767px;
     border-radius: 15px;
-
-
+    
+    display: flex;
+    flex-direction: column;
 
     background-color: #FDFDFF;
     border: 2px solid #E1E2FF;
+}
+
+.messages{
+    flex-grow: 1;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-width: 767px;
 }
 
 .chat_user {
@@ -49,6 +57,8 @@
     height: 50px;
 
     margin-left: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .chat_user_name {
@@ -62,10 +72,14 @@
 .chat_write {
     width: 706px;
     height: 57px;
-    border-radius: 5px;
     border: 2px solid #A5A6F6;
+    border-radius: 7px;
+    
     display: flex;
     align-items: center;
+
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 
 .chat_send_text {
@@ -118,3 +132,20 @@
     margin-left: -2px;
 }
 
+.message{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.m-name{
+    color: rgb(53, 53, 53);
+    text-decoration: underline;
+}
+
+.m-text{
+    overflow-wrap: break-word;
+    
+}
