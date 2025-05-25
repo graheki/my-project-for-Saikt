@@ -8,37 +8,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <title>Main</title>
     
 </head>
 
 <body class="body">
     <header class="header">
-        <img src="static/Chat_Logo.png" class="logo">
+        <img  class="logo">
     </header>
-    <div class="chat">
-        <div class="chat_user">
-            <img src="static/user_img.png" class="chat_user_img">
-            <label class="chat_user_name">Suporte ADMIN</label>
-        </div>
-        <div class="messages">
-            {% for msg in msgs %}
-                
-                <div class="message">
-                <div><label>{{msg[1][0]}}</label></div>
-                <p class="m-name">{{msg[1]}}:</p>
-                <div class="m-text">{{msg[2]}}</div>
+    <div class="main_boby">
+        <div class="chat_about_div_1">
+            <div class="chat_about_1">
+                <label class="about1_text"> О нашем чате: </label>
+                <label class="about1_text_1"><h4>1.</h4> тут вы можете найти друзей и не понять кто они </label>
+                <label class="about1_text_2"><h4>2.</h4> тут вы можете рассказать о себе и не кто не поймёт кто ты</label>
+                <label class="about1_text_3"><h4>3.</h4> тут вы можете понять как вами доражат другие</label>
             </div>
-            {% endfor %}
-            
-        </div>
-        <form class="chat_write" action="{{url_for('chat')}}" method="POST">
-            <input type="text" class="chat_send_text" name="message">
-            <button class="chat_send"><img src="static/chat_send_img.png" class="chat_send_img"></button>
-            <button class="file_send"><img src="static/file_send_img.png" class="file_send_img"></button>
-        </form>
-    </div>
+            <div class="chat_about_div_2">
+                <div class="chat_about_2">
+                    <label class="about2_text_1"> О том что есть </label>
+                    <label class="about2_text_2"> в чате </label>
+                    <label class="about2_text"> В нашем чате чего только нет:</label>
+                    <li>Регистрации нет,</li>
+                    <li>Защиты паролей нет,</li>
+                    <li>аккаунтов нет,</li>
+                    <li>безопасности нет!</li>
+                    <label class="about2_text"> Но зато у нас есть анонимный чат!</label>
+                    <img class="img_chat_anonim" src="static/chat_img.png">
 
+                </div>
+                <div class="chat_about_3">
+                    <img class="img_chat" src="static/chat_anonim_img.png">
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="chat_user">
+                <img src="static/user_img.png" class="chat_user_img">
+                <label class="chat_user_name">Chat Anonymous gamers</label>
+            </div>
+            <div class="messages">
+                {% for msg in msgs %}
+                <div class="message"> 
+                    <div class="m-img"><label class="m-img-text">{{msg[1][0]}}{{msg[1][1]}}</label></div>
+                    <div>
+                        <p class="m-name">{{msg[1]}}:</p>
+                            <div class="m-border"> 
+                                <div class="m-text">{{msg[2]}}</div>
+                            </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            <form class="chat_write" action="{{url_for('chat')}}" method="POST">
+                <input type="text" class="chat_send_text" name="message">
+                <button class="chat_send"><img src="static/chat_send_img.png" class="chat_send_img"></button>
+                <button class="file_send"><img src="static/file_send_img.png" class="file_send_img"></button>
+            </form>
+        </div>
+    </div>
     <script>
         var objDiv = document.querySelector(".messages");
         objDiv.scrollTop = objDiv.scrollHeight;
